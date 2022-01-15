@@ -1,0 +1,275 @@
+/*GENERAL*/
+
+*{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%; /*stabilisce 1 rem a 10 px con il font di default html 16px*/
+}
+
+nav {
+  padding: 0px;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul{
+  margin: 0;
+  padding-left: 0;
+}
+
+p{
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+#main-content {
+  min-height: calc(100vh - 72.44px);
+  background-color: #b88383;
+  padding-top: 85.89px;
+}
+
+.container {
+  max-width: 600px;
+  padding: 15px;
+  background-color: #8f6060;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.mark{
+  background: #b88383;
+}
+/*HEADER - NAVBAR*/
+
+header {
+  background-color: #92d5dd;
+  text-align: center;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index: 1;
+}
+
+header img {
+  width: 30px;
+}
+
+header ul {
+  display:flex;
+  justify-content: center;
+}
+
+header li {
+  font-size: 1.6rem;
+  padding: 0 20px;
+}
+
+.header{
+  padding: 10px 0;
+}
+
+.logo-container{
+  padding-bottom: 15px;
+}
+
+.active{
+  text-decoration: line-through;
+}
+
+/*GALLERY*/
+
+#gallery{
+  background-color: #92d5dd;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  padding : 5px 20px;
+}
+.item{
+  margin: 10px 0;
+}
+
+#gallery h1 {
+  margin-bottom: 5px;
+}
+#gallery img{
+  width: 100%; /*le immagini occupano tutta la larghezza della finestra*/
+}
+
+#gallery .picture{
+  line-height: 0;
+}
+
+#gallery p {
+  padding: 5px;
+}
+
+.caption {
+  background-color: #8f6060;
+}
+
+/*ABOUT*/
+#about {
+  background-color: #92d5dd;
+  display: flex;
+  flex-direction: column;
+  padding : 10px;
+  padding-bottom: 20px;
+}
+
+.profile-pic{
+  display:flex;
+  justify-content: center;
+}
+.profile-pic img{
+  width: 60%;
+  border-radius: 100%;
+}
+
+/*CONTACT*/
+#contact{
+  background-color: #92d5dd;
+  flex-direction: column;
+  display:flex;
+  padding :10px;
+
+}
+#contact h1 {
+  margin-bottom: 10px;
+}
+.contact li {
+  display:flex;
+  align-items: center;
+}
+
+.contact a {
+  font-size: 1.6rem;
+  padding-left: 5px;
+}
+/*FOOTER*/
+
+footer.main{
+  background-color: #92d5dd;
+  text-align: center;
+}
+footer.main a{
+  display: inline-block;
+  padding: 10px 10px;
+}
+footer img{
+  width: 30px;
+  height: 30px;
+}
+footer.main p {
+  font-size: 1.3rem;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+/*MEDIAQUERIES*/
+
+/*queries for tablet and desktop*/
+@media screen and (min-width: 768px){
+
+  .container{
+    margin: auto;
+  }
+
+  #about{
+    padding-top: 50px ;
+  }
+  
+  .contact{
+    padding-top: 50px;
+  }
+}
+
+/*queries for desktop*/
+@media screen and (min-width: 992px){
+
+  /*HEADER*/
+
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    padding-bottom: 0;
+    padding-left: 20px;
+  }
+
+  /*GALLERY*/
+
+  #gallery{
+    display: inline-block;
+  }
+
+  #gallery-title{
+    display: flex;
+    justify-content: center;
+  }
+
+  #gallery-title h1{
+    font-size: 2.4rem;
+  }
+
+  .gallery-container{
+    min-width: 900px;
+    max-width: 1000px;
+  }
+
+  #gallery-container{
+    display:flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    width: 50%;
+    padding: 0 10px;
+  }
+
+  
+  /*ABOUT*/
+
+  .about-container{
+    min-width: 700px;
+  }
+
+  #about {
+    margin:0;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .profile-pic{
+    display: inline-blocks;
+    background-color: #997d7d;
+  }
+
+  .profile-pic img {
+    width: 200px;
+  }
+
+  .description {
+    padding-left: 10px;
+  }
+  .description h1 {
+    margin: 0;
+  }
+  
+}
